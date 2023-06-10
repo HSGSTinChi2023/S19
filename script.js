@@ -89,28 +89,28 @@ function Ship() {
     if(lr == 1) c1 = tabDef.col - 1;
     r1 = getInt(3);
     arr[r1][c1] = 4; arr[r1 + 1][c1] = 4; arr[r1 + 2][c1] = 4; arr[r1 + 3][c1] = 4;
-    x[r1][c1].style.backgroundColor = "Pink"; 
-    x[r1 + 1][c1].style.backgroundColor = "Pink"; 
-    x[r1 + 2][c1].style.backgroundColor = "Pink";
-    x[r1 + 3][c1].style.backgroundColor = "Pink";
+    // x[r1][c1].style.backgroundColor = "Pink"; 
+    // x[r1 + 1][c1].style.backgroundColor = "Pink"; 
+    // x[r1 + 2][c1].style.backgroundColor = "Pink";
+    // x[r1 + 3][c1].style.backgroundColor = "Pink";
 
     r2 = getInt(6); // SHIP 2
     while(c2 == 0) c2 = getInt(3);
     arr[r2][c2] = 4; arr[r2][c2 + 1] = 4; arr[r2][c2 + 2] = 4; arr[r2][c2 + 3] = 4;
-    x[r2][c2].style.backgroundColor = "Pink"; 
-    x[r2][c2 + 1].style.backgroundColor = "Pink"; 
-    x[r2][c2 + 2].style.backgroundColor = "Pink";
-    x[r2][c2 + 3].style.backgroundColor = "Pink";
+    // x[r2][c2].style.backgroundColor = "Pink"; 
+    // x[r2][c2 + 1].style.backgroundColor = "Pink"; 
+    // x[r2][c2 + 2].style.backgroundColor = "Pink";
+    // x[r2][c2 + 3].style.backgroundColor = "Pink";
 
     if(c2 == 2) c3 = 1; // SHIP 3
     else if(c2 == 1) c3 = 2;
     r3 = r2;
     while(r3 == r2) r3 = getInt(6);
     arr[r3][c3] = 4; arr[r3][c3 + 1] = 4; arr[r3][c3 + 2] = 4; arr[r3][c3 + 3] = 4;
-    x[r3][c3].style.backgroundColor = "Pink"; 
-    x[r3][c3 + 1].style.backgroundColor = "Pink"; 
-    x[r3][c3 + 2].style.backgroundColor = "Pink";
-    x[r3][c3 + 3].style.backgroundColor = "Pink";
+    // x[r3][c3].style.backgroundColor = "Pink"; 
+    // x[r3][c3 + 1].style.backgroundColor = "Pink"; 
+    // x[r3][c3 + 2].style.backgroundColor = "Pink";
+    // x[r3][c3 + 3].style.backgroundColor = "Pink";
 
 
     sr1 = 0; sc1 = 0; sr2 = 0; sc2 = 0; sr3 = 0; sc3 = 0;
@@ -122,13 +122,13 @@ function Ship() {
     else if(5 - r3 >= 2) sr1 = getInt(5 - r3 - 1 - 1) + r3 + 1;
     while(sc1 == 0) sc1 = getInt(6);
     arr[sr1][sc1] = 2; arr[sr1 + 1][sc1] = 2;
-    x[sr1][sc1].style.backgroundColor = "Green"; x[sr1 + 1][sc1].style.backgroundColor = "Green"; 
+    //x[sr1][sc1].style.backgroundColor = "Green"; x[sr1 + 1][sc1].style.backgroundColor = "Green"; 
     
     if(lr == 0) sc2 = tabDef.col - 1; // SHIP 2
     sr2 = sr1;
     while(sr2 == sr1) sr2 = getInt(5);
     arr[sr2][sc2] = 2; arr[sr2 + 1][sc2] = 2;
-    x[sr2][sc2].style.backgroundColor = "Green"; x[sr2 + 1][sc2].style.backgroundColor = "Green";
+    //x[sr2][sc2].style.backgroundColor = "Green"; x[sr2 + 1][sc2].style.backgroundColor = "Green";
 
     sr3 = sr2; sc3 = sc2; // SHIP 3
     while(arr[sr3][sc3] != 0 || Surround(sr3, sc3) != 0) {
@@ -136,14 +136,14 @@ function Ship() {
         sc3 = getInt(7);
     }
     arr[sr3][sc3] = 2;
-    x[sr3][sc3].style.backgroundColor = "Blue";
+    //x[sr3][sc3].style.backgroundColor = "Blue";
     if(inside(sr3, sc3 - 1) == 1 && arr[sr3][sc3 - 1] == 0) {
         arr[sr3][sc3 - 1] = 2;
-        x[sr3][sc3 - 1].style.backgroundColor = "Blue";
+        //x[sr3][sc3 - 1].style.backgroundColor = "Blue";
     }
     else if(inside(sr3, sc3 + 1) == 1 && arr[sr3][sc3 + 1] == 0) {
         arr[sr3][sc3 + 1] = 2;
-        x[sr3][sc3 + 1].style.backgroundColor = "Blue";
+        //x[sr3][sc3 + 1].style.backgroundColor = "Blue";
     }
 
     fr1 = getInt(6); fc1 = getInt(7); // FLOAT 1
@@ -161,9 +161,9 @@ function Ship() {
         fr3 = getInt(6); fc3 = getInt(7);
     }
     arr[fr3][fc3] = 1; 
-    x[fr1][fc1].style.backgroundColor = "Red"; 
-    x[fr2][fc2].style.backgroundColor = "Red";
-    x[fr3][fc3].style.backgroundColor = "Red";
+    // x[fr1][fc1].style.backgroundColor = "Red"; 
+    // x[fr2][fc2].style.backgroundColor = "Red";
+    // x[fr3][fc3].style.backgroundColor = "Red";
 }
 
 function data() {
